@@ -78,7 +78,16 @@ public class TwitterInteractionTool {
 			WebElement buttonCmt = listCmt.get(i).findElement(By.cssSelector("button[data-testid='reply']"));
 			WebElement textCMT = listCmt.get(i).findElement(By.cssSelector("div[data-testid='tweetText']"));
 			String textIpnut2 = textCMT.getText();
-			buttonCmt.click();
+			try {
+				buttonCmt.click();
+			} catch (Exception e) {
+				// TODO: handle exception
+				Actions ac = new Actions(driver);
+				Thread.sleep(2000);
+				ac.sendKeys(Keys.ESCAPE).perform();
+				buttonCmt.click();
+			}
+			
 			Thread.sleep(1000);
 			Actions ac = new Actions(driver);
 			ac.sendKeys(textDefau + ". " + returnContentGPT(textInput1, textIpnut2)).perform();
