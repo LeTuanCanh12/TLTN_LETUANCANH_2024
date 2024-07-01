@@ -48,7 +48,7 @@ import okhttp3.Response;
 public class TwitterInteractionTool {
 	private WebDriver driver;
 
-	static String apiKey = "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";
+	static String apiKey = "skpBg57As9xB9hdlWrKTgbT3BlbkFJlUy2BSlWbx2iQ0ZWjJ7K";
 	static String assisstanId = "asst_F9dMi8lMVWCBhkSzIjqW4W5H";
 	static String instructions = "Respond with a sales-oriented approach, like a customer service advisor. Keep your answers concise, easy to understand, and closely aligned with the conversation's contentAnswer the exact question and do not give redundant answersI want the answer to the point. No other content appears";
 	static String vectorStoreId = "vs_Vti4nUl8CKiC1yIT35MEyxuA";
